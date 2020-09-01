@@ -8,8 +8,6 @@ import retrofit2.Response
 
 class UpdatePresenter (val listener: Listener){
     interface Listener{
-
-
         fun showEditSuccess(msg: String)
         fun showEditFailed(msg: String)
     }

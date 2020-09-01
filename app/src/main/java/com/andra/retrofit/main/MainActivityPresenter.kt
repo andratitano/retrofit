@@ -3,11 +3,14 @@ package com.andra.retrofit.main
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.andra.retrofit.network.ApiClient
+import com.andra.retrofit.pojo.DeletePersonResponse
+import com.andra.retrofit.pojo.GetPersonsResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainPresenter (val listener: Listener){
+class MainActivityPresenter (val listener: Listener){
     interface Listener{
         fun showListPerson(list: List<GetPersonsResponse.Result>)
         fun showDialog()

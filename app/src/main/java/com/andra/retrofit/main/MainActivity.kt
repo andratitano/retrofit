@@ -8,13 +8,9 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.andra.retrofit.R
 import com.andra.retrofit.add.AddActivity
-import com.andra.retrofit.network.ApiClient
 import com.andra.retrofit.pojo.GetPersonsResponse
 import com.andra.retrofit.update.UpdateActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class MainActivity : AppCompatActivity(), MainActivityPresenter.Listener {
     lateinit var progressDialog: ProgressDialog
@@ -64,7 +60,7 @@ class MainActivity : AppCompatActivity(), MainActivityPresenter.Listener {
     }
 
     override fun goToAddActivity() {
-        startActivity(Intent(this, AddActivity::class.java))
+        startActivity(Intent(this,AddActivity::class.java))
     }
 
     override fun goToEditActivity(result: GetPersonsResponse.Result) {
